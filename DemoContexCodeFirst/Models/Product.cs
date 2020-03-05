@@ -12,5 +12,8 @@ namespace DemoContexCodeFirst.Models
 
 
         public string ProductName { get; set; }
+        public int CategoryID { get; set; }
+
+
     }
 }

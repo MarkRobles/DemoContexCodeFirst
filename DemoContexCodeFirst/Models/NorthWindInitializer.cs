@@ -22,6 +22,19 @@ namespace DemoContexCodeFirst.Models
             Categorias.ForEach(c => context.Categories.Add(c));
 
             context.SaveChanges();
+
+
+            var Products = new List<Product>
+            {
+                new Product   { CategoryID=1,ID = 1,ProductName = "Soda" },
+                 new Product   { CategoryID=1,ID = 2,ProductName = "Cerveza" },
+                  new Product   { CategoryID=2,ID = 3,ProductName = "Ajo" },
+                   new Product   { CategoryID=2,ID = 4,ProductName = "Canela" }
+            };
+
+            Products.ForEach(p => context.Products.Add(p));
+
+            context.SaveChanges();
         }
 
     }

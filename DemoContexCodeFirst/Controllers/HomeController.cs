@@ -31,5 +31,17 @@ namespace DemoContexCodeFirst.Controllers
             }
             return View("Index", Categories);
         }
+
+
+
+        public ActionResult ShowProducts(int id)
+        {
+            /*Al utilizar esto no estas utilizando EntotyFramework, solo obtienes los datos de una fuente de datos y es mas flexible cambiarla*/
+            IProductRepository repository = new ProductRepository();
+            var Products = repository.GetProducts(id);
+
+            return View(Products);
+
+        }
     }
 }
